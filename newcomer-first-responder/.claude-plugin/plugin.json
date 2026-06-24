@@ -1,0 +1,18 @@
+{
+  "name": "newcomer-first-responder",
+  "version": "0.5.0",
+  "description": "An always-on AI inside sales agent (ISA) suite for Newcomer Group agents. Works both brand-new leads (First Responder) and the existing/older FUB database (nurture, 3x daily) toward booked appointments. Uses the Follow Up Boss API to detect, read, log, set stages, and book; the browser to send value-first texts and run Revii referrals. Covers Fello and HomeLight sources, handles opt-outs responsibly (Do Not Contact + Fishing Pond), self-heals on errors, learns team-wide, and runs on the agent's own Claude.",
+  "author": {
+    "name": "The Newcomer Group"
+  },
+  "keywords": [
+    "real-estate",
+    "follow-up-boss",
+    "lead-conversion",
+    "inside-sales-agent",
+    "isa",
+    "fello",
+    "referrals"
+  ],
+  "license": "UNLICENSED"
+}
