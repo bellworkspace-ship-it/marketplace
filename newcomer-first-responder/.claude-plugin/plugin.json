@@ -1,6 +1,6 @@
 {
   "name": "newcomer-first-responder",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A complete virtual inside sales agent for Newcomer Group agents. Its Smart List Manager works the agent's entire Follow Up Boss pipeline by smart list on a schedule — new-lead speed, conversation follow-up, bailed-appointment recovery, and long-term nurture in one coordinated, well-controlled run — clearing automated lists by advancing leads while leaving protected lists (Current Clients, Under Contract, Past Clients, Birthday, Closing Anniversary) untouched. Scoped to each agent's own assigned leads and pond. Covers Fello and HomeLight, sets appointments, honors opt-outs (Do Not Contact + Fishing Pond), self-heals, and runs on the agent's own Claude.",
   "author": {
     "name": "The Newcomer Group"

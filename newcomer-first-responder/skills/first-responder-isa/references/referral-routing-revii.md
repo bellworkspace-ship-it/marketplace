@@ -5,18 +5,20 @@ another state) is not a dead end — it's a referral fee. Route it through the
 Newcomer Revii network instead of working it locally.
 
 ## When to trigger
-- The property the lead is asking about is **outside the agent's service-area
-  zips** (from setup), **AND**
-- The lead has **no St. Augustine / St. Johns County buy or sell intent**.
+- The property the lead is asking about is **outside the Northeast Florida service
+  area** (the preloaded counties in `service-area-ne-florida.md`), **AND**
+- The lead has **no NE Florida buy or sell intent**.
 
-Compare the *property* location, not just where the lead lives.
+Compare the *property* location (and county) to the service area, not just where the
+lead lives.
 
 ## Qualify intent BEFORE referring (critical)
 Do **not** refer just because a valuation address is out of area. Many Fello leads
-own a home elsewhere but want to **buy or relocate to St. Augustine** — that's a
-local relocation buyer worth keeping, not a referral. First check the notes/history
-for St. Augustine intent (see `lead-context-and-fello.md`):
-- **Any St. Augustine buy/relocation/sell intent** → keep and work locally; do not refer.
+own a home elsewhere but want to **buy or relocate to NE Florida / St. Augustine** —
+that's a local relocation buyer worth keeping, not a referral. First check the
+notes/history for local intent (see `lead-context-and-fello.md` and
+`service-area-ne-florida.md`):
+- **Any NE Florida buy/relocation/sell intent** → keep and work locally; do not refer.
 - **Unclear** → ask one light qualifying question first (see the Fello openers in
   `value-message-library.md`).
 - **Purely out-of-area, no local intent** → proceed with the referral below (and

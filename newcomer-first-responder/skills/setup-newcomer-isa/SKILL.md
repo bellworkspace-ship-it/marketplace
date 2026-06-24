@@ -50,7 +50,9 @@ Confirm these are in place before onboarding agents. The agent inherits all of i
    If either logs out later, the ISA pings them and they reply "log me in"
    (see the ISA's login-dispatch behavior). Logins stay only on their device.
 5. **Quick personalization** (pre-fill from broker defaults where possible):
-   - service-area zip codes (local vs. out-of-area referral),
+   - **service area: preloaded to all of Northeast Florida** (`service-area-ne-florida.md`)
+     — the agent enters **no zip codes**; only ask if they serve a *subset* and want
+     to narrow it (e.g., St. Johns County only),
    - working/quiet hours (when it may send),
    - voice & signature (a couple of real text examples help),
    - alert channel for on-the-go pings (text to self / email / notification).

@@ -160,6 +160,7 @@ review.
 - `references/cadence-rules.md` — timing and follow-up sequencing by lead temperature
 - `references/lead-context-and-fello.md` — how to read FUB + Fello signals and segment leads
 - `references/homelight.md` — handling HomeLight seller referrals (valuation/cash offer → appointment)
+- `references/service-area-ne-florida.md` — preloaded NE Florida service area (counties + zips); local vs out-of-area
 - `references/referral-routing-revii.md` — routing out-of-area inquiries via coaching.revii.app
 - `references/opt-out-and-compliance.md` — opt-out flow (DNC tag, mark number/email, fishing pond) + compliance
 - `references/stage-workflow.md` — keeping leads in the right standard FUB stages
