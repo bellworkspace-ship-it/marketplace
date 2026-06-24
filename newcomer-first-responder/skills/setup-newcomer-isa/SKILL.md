@@ -54,22 +54,22 @@ Confirm these are in place before onboarding agents. The agent inherits all of i
    - working/quiet hours (when it may send),
    - voice & signature (a couple of real text examples help),
    - alert channel for on-the-go pings (text to self / email / notification).
-6. **Auto-schedule** — set up two recurring background runs on the agent's own
-   Claude (their credits):
-   - **First Responder** (new leads) — every ~15 minutes during working hours; new
-     leads are worked immediately.
-   - **Existing-lead nurture** — **3× per day** (e.g. ~9am, 1pm, 5pm) to work
-     Attempted Contact / Spoke with Customer / older leads toward an appointment.
-   Note: browser sending needs their computer on and Claude running; true overnight
-   coverage is the optional phase-2 texting provider.
-7. **Nurture & opt-out controls** (responsible/controllable):
-   - Confirm the **Fishing Pond** to use for opt-outs (broker may have created one);
-     opted-out leads get the **Do Not Contact** tag, their number/email marked, and
-     are moved there.
-   - Set a **per-run cap** on nurture volume (so older leads are re-engaged gently,
-     not blasted) and confirm frequency caps.
-   - Confirm **HomeLight** is recognized as a seller-referral source (worked in both
-     First Responder and nurture).
+6. **Auto-schedule (one engine)** — schedule the **Smart List Manager** as the
+   single recurring run on the agent's own Claude (their credits), e.g. **3× per day**
+   (~9am, 1pm, 5pm), with the new-lead/handraiser lists checked **more often** (every
+   ~15 min in working hours) for speed-to-lead. One engine = leads are never
+   double-worked. (Browser sending needs their computer on and Claude running; true
+   overnight coverage is the optional phase-2 texting provider.)
+7. **Smart Lists, pace & opt-out controls** (responsible/controllable):
+   - Review the agent's live smart lists and confirm which are **automated** vs
+     **protected**. Defaults to protect: **Current Clients, Under Contract, Past
+     Clients, Birthday, Closing Anniversary** (+ any the agent adds).
+   - Set the **balanced pace** and per-list daily **caps** (see `smart-list-playbook.md`);
+     remember each agent works only **their own** assigned leads/pond, so lists are
+     small and usually clear daily.
+   - Confirm the **Fishing Pond** for opt-outs (Do Not Contact tag + number/email
+     marked + moved there).
+   - Confirm **HomeLight** and **Fello** are recognized as sources.
 8. **Booking rules** (so it can set appointments hands-off): appointment **types and
    durations** (e.g., 15-min call, 30-min buyer consult, 60-min valuation/listing,
    showing), appointment **hours**, buffers/travel time, max per day, and minimum lead

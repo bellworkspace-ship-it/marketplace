@@ -11,8 +11,8 @@
     {
       "name": "newcomer-first-responder",
       "source": "./newcomer-first-responder",
-      "description": "AI inside sales agent suite: First Responder for new leads, Nurture for existing/older leads, HomeLight + Fello sources, smart scheduling, opt-out handling, and a self-test. Runs on each agent's own Claude.",
-      "version": "0.5.0"
+      "description": "Complete virtual ISA: the Smart List Manager works the agent's whole Follow Up Boss pipeline by smart list on a schedule — new-lead speed, follow-up, bailed-appointment recovery, and nurture — clearing automated lists while protecting Current Clients/Under Contract/Past Clients/Birthday/Closing Anniversary. Fello + HomeLight, opt-out safe, per-agent scoped. Runs on each agent's own Claude.",
+      "version": "0.6.0"
     }
   ]
 }

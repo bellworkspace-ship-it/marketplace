@@ -36,10 +36,11 @@ That's it — your marketplace is live.
 The `/plugin ...` slash commands only work in the Claude Code CLI — **desktop
 (Cowork) agents use the UI**:
 1. Claude desktop → **Cowork** tab → **Customize** → **Plugins** tab.
-2. **Personal plugins** → **+** → **Add marketplace** → **Add marketplace from GitHub**.
-3. Paste: `https://github.com/bellworkspace-ship-it/marketplace`
-4. Install **newcomer-first-responder**.
+2. **Personal plugins** → **+** → **Select a repository**.
+3. Enter: `https://github.com/bellworkspace-ship-it/marketplace`
+4. Find **newcomer-first-responder** and click **Sync**.
 5. Type **"set up the ISA"** → then **"run a test."**
+(To update later, open Plugins and **Sync** again.)
 
 > Private-repo note: agents need read access to it. If that's friction for
 > non-technical agents, use a dedicated **public** repo (the marketplace holds only
