@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "beacon-fub": {
+      "type": "http",
+      "url": "https://beacon-fub.onrender.com/mcp",
+      "headers": { "X-FUB-Key": "${FUB_API_KEY}" }
+    }
+  }
+}

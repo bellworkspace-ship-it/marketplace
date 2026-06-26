@@ -22,6 +22,16 @@ This is the plugin's single scheduled engine: it includes the First Responder's
 fast new-lead behavior, so there is no separate first-responder run and leads are
 never worked twice.
 
+**Connection & cost (read cheap, send via browser).** Prefer the **FUB API** for all
+*reading* — the work list and each lead's full context — whenever a FUB connection is
+configured; structured JSON is the cheapest, cleanest way to pull the database and
+reaches the most leads per credit. Use the **browser only to send texts** (and Revii)
+— that's the expensive part, so never browse to *read* when the API can. If no API
+connection is set up yet, read FUB in the browser as **text** (`get_page_text`, never
+screenshots) with strict caps. Spend the fewest tokens for the most quality touches —
+follow `references/credit-efficiency.md` every run. Never block on the agent creating
+an API key (some accounts restrict them).
+
 ## Operating principles
 1. **Clear by advancing.** A lead leaves a list when you move them forward (reply →
    Spoke With; booked → Appointment Set; opted out → DNC/Pond). Working the lead is
@@ -38,9 +48,10 @@ never worked twice.
 ## The run (on schedule)
 
 ### 1. Session & setup
-Confirm FUB API access and the browser for sending (login dispatch if needed). Load
-from setup: the **protected list set**, **per-list caps**, the **balanced pace**,
-quiet hours, voice, MLS/valuation tools, and autonomy mode.
+Confirm FUB is **open and logged in** in the browser (login dispatch if needed) —
+this is the connection, no API key. Load from setup: the **protected list set**,
+**per-list caps**, the **balanced pace**, quiet hours, voice, MLS/valuation tools,
+and autonomy mode.
 
 ### 2. Read the live smart lists
 Call `GET /smartLists` to get the agent's actual lists and counts. Map each to the
@@ -86,6 +97,7 @@ Anniversary** (plus any others the agent marks protected in setup). Leave these
 entirely alone.
 
 ## References
+- `references/credit-efficiency.md` — fewest credits for the most quality touches (read every run)
 - `references/smart-list-playbook.md` — per-list goals, cadences, caps, exit conditions
 - `references/bailed-appointment-reengagement.md` — Appointment Set no-shows & Met-With-Customer ghosting
 - `references/stage-workflow.md` · `references/cadence-rules.md` · `references/routing-and-dedup.md`

@@ -1,0 +1,6 @@
+# Never commit secrets or build artifacts
+__pycache__/
+*.pyc
+fub_key.txt
+.beacon/
+.DS_Store

@@ -22,33 +22,39 @@ agent's choices to a local settings note the ISA reads each run (`isa-settings.m
 in the agent's working folder — never in any shared repo).
 
 ## Broker setup (one time — done by Steven, not the agent)
-Confirm these are in place before onboarding agents. The agent inherits all of it:
-1. **Register the system** at https://apps.followupboss.com/system-registration to
-   get the `X-System` / `X-System-Key` (raises rate limits and is required). This
-   is baked into the plugin config — not per agent.
-2. **Enable the API Key Restrictions power-up** so the owner can grant/revoke each
-   agent's API access centrally (kill switch).
-3. **Create owner-level webhooks** (e.g. `peopleCreated`, `peopleStageUpdated`) for
-   near-real-time detection — only the Owner can do this.
-4. **Create the shared team learning log** (a shared Google Sheet/Drive file) and
+**Beacon runs browser-first — no FUB API keys, no system registration, no webhooks
+required.** The only must-dos:
+1. **Create the shared team learning log** (a shared Google Sheet/Drive file) and
    share it with the team.
-5. **Set brokerage defaults** (service-area zip lists, voice norms) — optional; the
-   value/objection/cadence playbooks ship inside the plugin already.
-6. **Publish the plugin** to the private Newcomer marketplace so agents install in
-   two clicks.
+2. **Set brokerage defaults** (service area is preloaded to NE Florida; tweak voice
+   norms if you want) — the value/objection/cadence playbooks ship in the plugin.
+3. **Publish the plugin** to the Newcomer marketplace so agents install in two clicks.
+
+> **Optional, advanced — headless API path (NOT needed to start).** If you ever want
+> Beacon to read/log through the FUB *API* instead of the browser, that requires
+> broker plumbing: register a system at apps.followupboss.com/system-registration,
+> grant each agent **API access** via **Admin → Teams → "API Access" checkbox**
+> (that's the *API Key Restrictions* power-up that showed your agent the "contact
+> your account owner" message), add owner webhooks, and wire a FUB MCP. Until then,
+> agents need **none** of this — just a logged-in FUB browser tab.
 
 ## Agent setup (about 2 minutes)
 1. **Install** the Newcomer plugins from the marketplace.
-2. **Connect Follow Up Boss** — one-click **OAuth**: the agent signs in and
-   consents as themselves. This scopes the ISA to *their own assigned leads only*
-   (Agent role) — never broker-wide. (Fallback if needed: paste their key from
-   FUB **Admin → API**.)
+2. **Connect Follow Up Boss — two quick parts:**
+   - **API key (for efficient reading):** paste the agent's FUB API key once (FUB →
+     **Admin → API**). Save it locally to **`~/.beacon/fub_key`** — that's what the
+     Beacon Follow Up Boss connector uses to pull the work list and full lead context
+     cheaply (the credit-efficient path). The key is scoped to the agent's **own
+     leads** and stays on their device. *(If FUB shows "contact your account owner,"
+     the Owner enables it via **Admin → Teams → API Access**. If you skip the key,
+     Beacon falls back to reading in the browser — works, just costs more credits.)*
+   - **Browser logged in (for sending):** keep FUB **open and logged in** in Chrome —
+     that's how Beacon actually sends the texts (the API only logs them).
 3. **Connect Google Calendar + Gmail** — one click each (for booking and email).
-4. **Confirm the browser for sending** — make sure Chrome (or Edge) has FUB open
-   and logged in; this is what actually sends texts, since the API can only log
-   them. Confirm they can log into `https://coaching.revii.app` for referrals.
-   If either logs out later, the ISA pings them and they reply "log me in"
-   (see the ISA's login-dispatch behavior). Logins stay only on their device.
+4. **Confirm Revii** — make sure the agent can log into
+   `https://coaching.revii.app` for out-of-area referrals. If FUB or Revii logs out
+   later, Beacon pings them and they reply "log me in" (login-dispatch). Tip: keep
+   FUB "remembered"/logged in so it's always ready. Logins stay only on their device.
 5. **Quick personalization** (pre-fill from broker defaults where possible):
    - **service area: preloaded to all of Northeast Florida** (`service-area-ne-florida.md`)
      — the agent enters **no zip codes**; only ask if they serve a *subset* and want

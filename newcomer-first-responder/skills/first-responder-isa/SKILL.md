@@ -18,12 +18,18 @@ metadata:
 Act as the agent's tireless inside sales agent. Each run, find every lead that
 needs a touch, send the single best value-first message, move the conversation
 toward a booked appointment, keep Follow Up Boss (FUB) perfectly updated, and
-turn out-of-area inquiries into referrals. Use the agent's own scoped FUB
-access — the **API** for everything structured (detect, read, log, book, update)
-and the **browser** only to actually send texts and run Revii referral searches.
-Never use broker-level credentials. Follow `references/fub-api-reference.md` for
-endpoints and `references/error-handling-and-resilience.md` so agents never see
-integration errors.
+turn out-of-area inquiries into referrals.
+
+**Connection model & cost (read cheap, send via browser).** Prefer the **FUB API**
+for all *reading* — the work list and each lead's full context — whenever a FUB
+connection is configured; structured JSON is the cheapest, cleanest way to pull the
+database and read context (`references/fub-api-reference.md`,
+`references/credit-efficiency.md`). Use the **browser only to send texts** and run
+Revii (`references/fub-navigation.md`) — that's the expensive part, so never browse
+to *read* when the API can. If no API connection is set up yet, read FUB in the
+browser as **text** (`get_page_text`, never screenshots) with strict caps. Never
+block on the agent creating an API key (some accounts restrict them), and never use
+broker-level credentials.
 
 ## Operating principles (non-negotiable)
 
@@ -153,6 +159,7 @@ review.
 
 - `references/fub-api-reference.md` — authoritative FUB endpoints, auth, X-System, rate limits
 - `references/error-handling-and-resilience.md` — rate-limit budgeting, retries/backoff, self-healing
+- `references/credit-efficiency.md` — fewest credits for the most quality touches (read every run)
 - `references/fub-navigation.md` — browser steps for the one API-impossible action (sending texts) + UI fallback
 - `references/value-message-library.md` — value-first message types and templates
 - `references/message-style-guide.md` — voice, tone, and the "no just-checking-in" rules
